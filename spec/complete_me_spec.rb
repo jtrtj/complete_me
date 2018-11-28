@@ -10,13 +10,9 @@ describe CompleteMe do
   context 'instance methods' do
     it '#insert - adds string to @list and #count returns the count of strings in @list' do
       completion = CompleteMe.new
+      completion.insert("pizza")
 
-      expect(completion.insert("pizza").to change(completion.count).by(1))
+      expect(completion.count).to eq(1)
     end
   end
 end
-
-# completion.insert("pizza")
-
-# completion.count
-# => 1
